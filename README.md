@@ -2,7 +2,7 @@
 
 ## Reto 5
 
-Requerimiento construcción de una aplicación de escritorio para la extracción de información y la generación de informes
+Requerimiento construcción de una aplicación de escritorio para la extracción de información y la generación de informes.
 
 ### Descripción del problema
 
