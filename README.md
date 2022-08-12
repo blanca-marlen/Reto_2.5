@@ -31,17 +31,23 @@ Para la creación de los informes, se debe tener en cuenta:
 
 ### Consultas SQL realizadas
 
+1. **Primer informe:**
+
 ``` sql
 SELECT ID_Lider AS ID, Nombre, Primer_Apellido, Ciudad_Residencia
 FROM Lider
 ORDER BY Ciudad_Residencia;
 ```
 
+2. **Segundo informe:**
+
 ``` sql
 SELECT ID_Proyecto AS ID, Constructora, Numero_Habitaciones, Ciudad
 FROM Proyecto p 
 WHERE (p.Clasificacion='Casa Campestre' AND (p.Ciudad='Santa Marta' OR p.Ciudad='Cartagena' OR p.Ciudad='Barranquilla'));
 ```
+
+3. **Tercer informe:**
 
 ``` sql
 SELECT c.ID_Compra AS ID, p.Constructora, p.Banco_Vinculado 
