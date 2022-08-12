@@ -14,7 +14,10 @@ Requerimiento construcción de una aplicación de escritorio para la extracción
 
 La estructura de la base de datos se presenta a continuación:
 
-!(ProyectoConstruccion)[ProyectoConstruccion.png]
+<br>
+<p align="center">
+  <img src="ProyectoConstruccion.png" alt="Imagen de la base de datos del proyecto de construcción">
+</p>
 
 ### Información requerida
 
