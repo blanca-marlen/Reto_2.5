@@ -5,8 +5,12 @@
 
 package co.com.marlen.view;
 
-import java.util.ArrayList;
-import javax.swing.table.DefaultTableModel;
+import java.util.List;
+import co.com.marlen.controller.ReportesController;
+import co.com.marlen.model.vo.TercerInformeVo;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,7 +18,29 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TercerInforme extends javax.swing.JFrame {
 
+    public static final ReportesController controller = new ReportesController();
+
     public void tabla() {
+
+        try {
+            List<TercerInformeVo> lideres = controller.listarTercerInforme();
+            String salida = "ID\tConstructora\t\tBanco Vinculado\n----------------------------------------------------------------------------------------------------------------------------\n";
+            
+            for (TercerInformeVo lider:lideres) {
+                salida += lider.getId();
+                salida += "\t";
+                salida += lider.getConstructora();
+                salida += "\t\t";
+                salida += lider.getBancoVinculado();
+                salida += "\n----------------------------------------------------------------------------------------------------------------------------\n";
+            }
+            
+            jTextAreaT.setText(salida);
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(PrimerInforme.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }
     

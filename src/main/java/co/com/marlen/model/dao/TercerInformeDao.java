@@ -16,7 +16,7 @@ public class TercerInformeDao {
         Connection conn = JDBCUtilities.getConnection();
         Statement stmt = null;
         ResultSet rs = null;
-        // second consult from Cycle_2\Unit_2.3\Script_Challenge_2.3.sql
+        
         String consult = "SELECT c.ID_Compra AS ID, p.Constructora, p.Banco_Vinculado FROM Compra c JOIN Proyecto p USING (ID_Proyecto) WHERE c.Proveedor='Homecenter' AND p.Ciudad='Salento'";
 
         try {

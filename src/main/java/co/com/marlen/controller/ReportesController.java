@@ -22,8 +22,8 @@ public class ReportesController {
         return PrimerInformeDao.toList();
     }
 
-    public List<SegundoInformeVo> listarSegundoInforme(Double limit) throws SQLException {
-        return SegundoInformeDao.toList(limit);
+    public List<SegundoInformeVo> listarSegundoInforme() throws SQLException {
+        return SegundoInformeDao.toList();
     }
 
     public List<TercerInformeVo> listarTercerInforme() throws SQLException {

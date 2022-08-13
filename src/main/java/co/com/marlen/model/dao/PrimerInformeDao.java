@@ -16,7 +16,7 @@ public class PrimerInformeDao {
         Connection conn = JDBCUtilities.getConnection();
         Statement stmt = null;
         ResultSet rs = null;
-        // second consult from Cycle_2\Unit_2.3\Script_Challenge_2.3.sql
+        
         String consult = "SELECT ID_Lider AS ID, Nombre, Primer_Apellido, Ciudad_Residencia FROM Lider ORDER BY Ciudad_Residencia";
 
         try {

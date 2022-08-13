@@ -11,17 +11,16 @@ import co.com.marlen.model.vo.SegundoInformeVo;
 import co.com.marlen.util.JDBCUtilities;
 
 public class SegundoInformeDao {
-    public List<SegundoInformeVo> toList(Double limit) throws SQLException {
+    public List<SegundoInformeVo> toList() throws SQLException {
         ArrayList<SegundoInformeVo> reply = new ArrayList<SegundoInformeVo>();
         Connection conn = JDBCUtilities.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        // second consult from Cycle_2\Unit_2.3\Script_Challenge_2.3.sql
+        
         String consult = "SELECT ID_Proyecto AS ID, Constructora, Numero_Habitaciones, Ciudad FROM Proyecto p WHERE (p.Clasificacion='Casa Campestre' AND (p.Ciudad='Santa Marta' OR p.Ciudad='Cartagena' OR p.Ciudad='Barranquilla'))";
 
         try {
             stmt = conn.prepareStatement(consult);
-            stmt.setDouble(1, limit);
             rs = stmt.executeQuery();
             while (rs.next()) {
                 SegundoInformeVo object = new SegundoInformeVo();
